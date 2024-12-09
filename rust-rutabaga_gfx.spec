@@ -19,6 +19,9 @@ Patch:          rutabaga_gfx-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
+# current bindgen limitation
+ExclusiveArch: x86_64 aarch64
+
 %global _description %{expand:
 Handling virtio-gpu protocols.}
 
