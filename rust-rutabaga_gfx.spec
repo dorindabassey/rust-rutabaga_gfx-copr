@@ -25,7 +25,7 @@ BuildRequires:  cargo-rpm-macros >= 24
 # architectures are not included in the conditional compilation attributes
 # that use the stdio module. The stdio module is not declared for them in
 # the crate file that uses it.
-ExcludeArch: powerpc64 s390x
+ExcludeArch: ppc64le s390x
 
 %global _description %{expand:
 Handling virtio-gpu protocols.}
