@@ -1,10 +1,12 @@
 --- rutabaga_gfx-0.1.4/Cargo.toml	1970-01-01T00:00:01+00:00
-+++ rutabaga_gfx-0.1.4/Cargo.toml	2024-12-09T14:20:58.589525+00:00
-@@ -16,6 +16,7 @@
++++ rutabaga_gfx-0.1.4/Cargo.toml	2024-12-10T13:35:22.619594+00:00
+@@ -15,7 +15,8 @@
+ version = "0.1.4"
  authors = ["The ChromiumOS Authors + Android Open Source Project"]
  description = "Handling virtio-gpu protocols"
- license-file = "LICENSE"
+-license-file = "LICENSE"
 +license = "BSD-3-Clause"
++exclude = ["/src/generated/generate.py"]
  
  [dependencies.cfg-if]
  version = "1.0.0"

@@ -15,12 +15,17 @@ Source:         %{crates_source}
 # Automatically generated patch to strip dependencies and normalize metadata
 Patch:          rutabaga_gfx-fix-metadata-auto.diff
 # Manually created patch for downstream crate metadata changes
+# This patch fixes the license and excluded unwanted *.py script from the
+# crate.
 Patch:          rutabaga_gfx-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
-# current bindgen limitation
-ExclusiveArch: x86_64 aarch64 %{ix86}
+# The spec fail to build for these architectures listed, because these
+# architectures are not included in the conditional compilation attributes
+# that use the stdio module. The stdio module is not declared for them in
+# the crate file that uses it.
+ExcludeArch: powerpc64 s390x
 
 %global _description %{expand:
 Handling virtio-gpu protocols.}
@@ -38,7 +43,6 @@ use the "%{crate}" crate.
 
 %files          devel
 %license %{crate_instdir}/LICENSE
-%exclude %{crate_instdir}/LICENSE
 %{crate_instdir}/
 
 %package     -n %{name}+default-devel

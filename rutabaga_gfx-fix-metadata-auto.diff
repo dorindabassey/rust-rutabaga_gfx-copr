@@ -1,5 +1,5 @@
 --- rutabaga_gfx-0.1.4/Cargo.toml	1970-01-01T00:00:01+00:00
-+++ rutabaga_gfx-0.1.4/Cargo.toml	2024-12-09T14:20:12.958538+00:00
++++ rutabaga_gfx-0.1.4/Cargo.toml	2024-12-10T13:34:22.482847+00:00
 @@ -62,11 +62,3 @@
      "ioctl",
  ]
